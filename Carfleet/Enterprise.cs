@@ -13,6 +13,11 @@
         #region public methods
         public Enterprise(string name, string street, string city, string phonenumber, string emailaddress)
         {
+            this.name = name;
+            this.street = street;
+            this.city = city;
+            this.phonenumber = phonenumber;
+            this.emailaddress = emailaddress;
         }
         #endregion public methods
     }
