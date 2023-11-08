@@ -30,7 +30,7 @@ namespace Carfleet
             Assert.AreEqual(_registration, _car.Registration);
             Assert.AreEqual(_brand, _car.Brand);
             Assert.AreEqual(_model, _car.Model);
-            Assert.AreEqual(_chassisNumber, _car.ChassisNumber;
+            Assert.AreEqual(_chassisNumber, _car.ChassisNumber);
         }
     }
 }
