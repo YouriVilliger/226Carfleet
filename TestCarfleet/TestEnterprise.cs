@@ -1,18 +1,12 @@
 using NUnit.Framework;
 
-namespace TestCarfleet
+namespace Carfleet
 {
     public class TestEnterprise
     {
         [SetUp]
         public void Setup()
         {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
         }
     }
 }

@@ -66,6 +66,11 @@ namespace Carfleet{
                 _chassisNumber = value;
             }
         }
+
+        public override string ToString()
+        {
+            return _registration+" - "+_brand + " - " +_model + " - " +_chassisNumber;
+        }
         #endregion public methods
     }
 }

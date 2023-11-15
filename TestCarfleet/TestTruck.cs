@@ -32,5 +32,18 @@ namespace Carfleet
             Assert.AreEqual(_model, _truck.Model);
             Assert.AreEqual(_chassisNumber, _truck.ChassisNumber);
         }
+
+        [Test]
+        public void ToString_AllProperties_GetFullString()
+        {
+            //given
+            string expectedString = "VD 123 567 - Volvo - FH16 - VOL45-0157966";
+
+            //when
+
+            //then
+            Assert.AreEqual(expectedString, _truck.ToString());
+        }
+
     }
 }

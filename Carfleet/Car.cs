@@ -27,7 +27,7 @@ namespace Carfleet{
             }
             set
             {
-                _registration= value;
+                _registration = value;
             }
         }
 
@@ -39,7 +39,7 @@ namespace Carfleet{
             }
             set
             {
-                _brand= value;
+                throw new NotImplementedException();
             }
         }
 
@@ -51,7 +51,7 @@ namespace Carfleet{
             }
             set
             {
-                _model= value;
+                throw new NotImplementedException();
             }
         }
 
@@ -63,8 +63,12 @@ namespace Carfleet{
             }
             set
             {
-                _chassisNumber= value;
+                throw new NotImplementedException();
             }
+        }
+        public override string ToString()
+        {
+            return _registration + " - " + _brand + " - " + _model + " - " + _chassisNumber;
         }
         #endregion public methods
     }
