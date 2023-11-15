@@ -12,12 +12,12 @@
 
         static private void DisplayCar(Car car)
         {
-            System.Console.WriteLine(car.ToString());
+            Console.WriteLine(car.ToString());
         }
 
         static private void DisplayTruck(Truck truck)
         {
-            System.Console.WriteLine(truck.ToString());
+            Console.WriteLine(truck.ToString());
         }
     }
 }
