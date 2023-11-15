@@ -26,7 +26,12 @@ namespace Carfleet{
 
         public override string ToString()
         {
-            return Registration + " - " + Brand + " - " + Model + " - " + ChassisNumber + " - " + IsCarryingGoods;
+            string message = Registration + " - " + Brand + " - " + Model + " - " + ChassisNumber;
+            if (!IsCarryingGoods)
+            {
+                message += " - " + IsCarryingGoods;
+            }
+            return message;
         }
         #endregion public methods
     }

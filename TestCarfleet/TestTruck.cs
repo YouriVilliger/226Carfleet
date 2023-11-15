@@ -37,7 +37,7 @@ namespace Carfleet
         public void ToString_AllPropertiesDefaultValue_GetFullString()
         {
             //given
-            string expectedString = "VD 123 567 - Volvo - FH16 - VOL45-0157966 - false";
+            string expectedString = "VD 123 567 - Volvo - FH16 - VOL45-0157966 - False";
 
             //when
 
