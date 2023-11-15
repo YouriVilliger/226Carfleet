@@ -1,75 +1,32 @@
 ﻿using System;
 
 namespace Carfleet{
-    public class Truck
+    public class Truck:Vehicle
     {
         #region private attributes
-        private string _registration;
-        private string _brand;
-        private string _model;
-        private string _chassisNumber;
+        private Boolean _isCarryingGoods = false;
         #endregion private attributes
 
         #region public methods
-        public Truck(string registration, string brand, string model, string chassisNumber)
+        public Truck(string registration, string brand, string model, string chassisNumber):base(registration, brand, model, chassisNumber)
         {
-            _registration = registration;
-            _brand = brand;
-            _model = model;
-            _chassisNumber = chassisNumber;
         }
 
-        public string Registration
+        public Boolean IsCarryingGoods
         {
             get
             {
-                return _registration;
+                return _isCarryingGoods;
             }
             set
             {
-                _registration = value;
-            }
-        }
-
-        public string Brand
-        {
-            get
-            {
-                return _brand;
-            }
-            set
-            {
-                _brand = value;
-            }
-        }
-
-        public string Model
-        {
-            get
-            {
-                return _model;
-            }
-            set
-            {
-                _model = value;
-            }
-        }
-
-        public string ChassisNumber
-        {
-            get
-            {
-                return _chassisNumber;
-            }
-            set
-            {
-                _chassisNumber = value;
+                _isCarryingGoods = value;
             }
         }
 
         public override string ToString()
         {
-            return _registration+" - "+_brand + " - " +_model + " - " +_chassisNumber;
+            return Registration + " - " + Brand + " - " + Model + " - " + ChassisNumber + " - " + IsCarryingGoods;
         }
         #endregion public methods
     }
