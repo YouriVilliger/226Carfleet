@@ -4,6 +4,7 @@ namespace Carfleet{
     public class Truck:Vehicle
     {
         #region private attributes
+        //TODO ???
         private Boolean _isCarryingGoods = false;
         #endregion private attributes
 
@@ -26,12 +27,7 @@ namespace Carfleet{
 
         public override string ToString()
         {
-            string message = base.ToString();
-            if (!IsCarryingGoods)
-            {
-                message += " - " + IsCarryingGoods.ToString().ToLower();
-            }
-            return message;
+            return base.ToString() + " - " + _isCarryingGoods.ToString().ToLower();
         }
         #endregion public methods
     }

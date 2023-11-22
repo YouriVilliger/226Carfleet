@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.IO.Pipes;
+using System.Threading;
 
 namespace Carfleet
 {
@@ -12,20 +12,58 @@ namespace Carfleet
         private string _name;
         private string _firstname;
         private string _phonenumber;
-        private string _emailAddress;
-        private string _language;
+        private string _emailaddress;
+        private List<string> _language;
         #endregion attribut private
 
-        #region method public
-        public Person(string name,string firstname, string phonenumber, string emailAddress, string language = "") {
-        
+        #region public methods
+        public Person(string name, string firstname, string phonenumber, string emailaddress, List<string> language = null)
+        {
             _name = name;
             _firstname = firstname;
             _phonenumber = phonenumber;
-            _emailAddress = emailAddress;
+            _emailaddress = emailaddress;
             _language = language;
         }
 
-        #endregion method public
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+        }
+        public string Firstname
+        {
+            get
+            {
+                return _firstname;
+            }
+        }
+
+        public string Phonenumber
+        {
+            get
+            {
+                return _phonenumber;
+            }
+        }
+
+        public List<string> Language
+        {
+            get
+            {
+                return _language;
+            }
+        }
+
+        public string Emailaddress
+        {
+            get
+            {
+                return _emailaddress;
+            }
+        }
+        #endregion public methods
     }
 }

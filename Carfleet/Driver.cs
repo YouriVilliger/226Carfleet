@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Carfleet
 {
@@ -10,7 +11,7 @@ namespace Carfleet
         #endregion private attributes
 
         #region public methods
-        public Driver(string name, string firstname, string phonenumber, string emailaddress, string language = "", string workZone = "") : base(name, firstname, phonenumber, emailaddress, language)
+        public Driver(string name, string firstname, string phonenumber, string emailaddress, List<string> language, string workZone = "") : base(name, firstname, phonenumber, emailaddress, language)
         {
             _workZone = workZone;
         }
