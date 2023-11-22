@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.IO.Pipes;
-using System.Threading;
+﻿using System.Collections.Generic;
 
 namespace Carfleet
 {
@@ -54,6 +50,10 @@ namespace Carfleet
             get
             {
                 return _languages;
+            }
+            set
+            {
+                _languages = value;
             }
         }
 
