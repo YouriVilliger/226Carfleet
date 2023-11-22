@@ -11,13 +11,21 @@ namespace Carfleet
         #endregion private attributes
 
         #region public methods
-        public Driver(string name, string firstname, string phonenumber, string emailaddress, List<string> languages, string workZone = "") : base(name, firstname, phonenumber, emailaddress, languages)
+        public Driver(string name, string firstname, string phonenumber, string emailaddress, string workZone, List<string> languages) : base(name, firstname, phonenumber, emailaddress, languages)
         {
             _workZone = workZone;
         }
         public void TakeAVehicule(Vehicle vehicle)
         {
             _vehicle = vehicle;
+        }
+
+        public string WorkZone
+        {
+            get
+            {
+                return _workZone;
+            }
         }
 
         #endregion public methods
