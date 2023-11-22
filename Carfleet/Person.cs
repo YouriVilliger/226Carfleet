@@ -13,17 +13,17 @@ namespace Carfleet
         private string _firstname;
         private string _phonenumber;
         private string _emailaddress;
-        private List<string> _language;
+        private List<string> _languages;
         #endregion attribut private
 
         #region public methods
-        public Person(string name, string firstname, string phonenumber, string emailaddress, List<string> language = null)
+        public Person(string name, string firstname, string phonenumber, string emailaddress, List<string> languages = null)
         {
             _name = name;
             _firstname = firstname;
             _phonenumber = phonenumber;
             _emailaddress = emailaddress;
-            _language = language;
+            _languages = languages;
         }
 
         public string Name
@@ -49,11 +49,11 @@ namespace Carfleet
             }
         }
 
-        public List<string> Language
+        public List<string> Languages
         {
             get
             {
-                return _language;
+                return _languages;
             }
         }
 

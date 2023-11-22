@@ -11,7 +11,7 @@ namespace Carfleet
         #endregion private attributes
 
         #region public methods
-        public Driver(string name, string firstname, string phonenumber, string emailaddress, List<string> language, string workZone = "") : base(name, firstname, phonenumber, emailaddress, language)
+        public Driver(string name, string firstname, string phonenumber, string emailaddress, List<string> languages, string workZone = "") : base(name, firstname, phonenumber, emailaddress, languages)
         {
             _workZone = workZone;
         }
