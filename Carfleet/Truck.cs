@@ -26,10 +26,10 @@ namespace Carfleet{
 
         public override string ToString()
         {
-            string message = Registration + " - " + Brand + " - " + Model + " - " + ChassisNumber;
+            string message = base.ToString();
             if (!IsCarryingGoods)
             {
-                message += " - " + IsCarryingGoods;
+                message += " - " + IsCarryingGoods.ToString().ToLower();
             }
             return message;
         }
