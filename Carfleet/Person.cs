@@ -53,7 +53,13 @@ namespace Carfleet
             }
             set
             {
-                _languages = value;
+                foreach (string language in value)
+                {
+                    if (!_languages.Contains(language))
+                    {
+                        _languages.Add(language);
+                    }
+                }  
             }
         }
 
