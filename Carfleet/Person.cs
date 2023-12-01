@@ -55,13 +55,21 @@ namespace Carfleet
             }
             set
             {
-                foreach (string language in value)
+                if (_languages.Count > 0)
                 {
-                    if (!_languages.Contains(language))
-                    {
-                        _languages.Add(language);
-                    }
+                    _languages.AddRange(value);
                 }
+
+                foreach (var item in _languages)
+                {
+                    if (value.Contains(item))
+                    {
+                        _languages.Remove(item);
+                    }
+                    return;
+                }
+
+                _languages = value;
             }
         }
 
