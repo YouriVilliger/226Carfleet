@@ -28,6 +28,19 @@ namespace Carfleet
             }
         }
 
+        public Vehicle Vehicle
+        {
+            get
+            {
+                return _vehicle;
+            }
+        }
+
+        public void TakeAVehicle(Vehicle vehicle)
+        {
+            _vehicle = vehicle;
+        }
+
         #endregion public methods
     }
 }

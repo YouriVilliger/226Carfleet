@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 
 namespace Carfleet
 {
@@ -9,11 +11,11 @@ namespace Carfleet
         private string _firstname;
         private string _phonenumber;
         private string _emailaddress;
-        private List<string> _languages;
+        private List<string> _languages = new List<string>();
         #endregion attribut private
 
         #region public methods
-        public Person(string name, string firstname, string phonenumber, string emailaddress, List<string> languages = null)
+        public Person(string name, string firstname, string phonenumber, string emailaddress, List<string> languages)
         {
             _name = name;
             _firstname = firstname;
@@ -59,7 +61,7 @@ namespace Carfleet
                     {
                         _languages.Add(language);
                     }
-                }  
+                }
             }
         }
 
