@@ -1,4 +1,6 @@
-﻿namespace Carfleet
+﻿using System;
+
+namespace Carfleet
 {
     public class Enterprise
     {
@@ -19,6 +21,33 @@
             this.phonenumber = phonenumber;
             this.emailaddress = emailaddress;
         }
+
+        public void Add(Vehicle vehicle)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add(Driver driver)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AssignVehicleToDriver(string chassiNumber, string driverEmailaddress)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GetDriverByEmailaddress(string driverEmailaddress)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UnassignVehicleFromDriver(string chassiNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+
         #endregion public methods
     }
 }

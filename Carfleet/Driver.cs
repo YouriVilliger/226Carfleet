@@ -38,9 +38,25 @@ namespace Carfleet
 
         public void TakeAVehicle(Vehicle vehicle)
         {
+            if (_vehicle != null)
+            {
+                throw new VehicleAlreadyAssignedException();
+            }
             _vehicle = vehicle;
+        }
+
+        public void ReleaseAVehicle()
+        {
+            if (_vehicle != null)
+            {
+                throw new NoVehicleAssignedException();
+            }
+            _vehicle = null;
         }
 
         #endregion public methods
     }
+
+    public class NoVehicleAssignedException : Exception { }
+    public class VehicleAlreadyAssignedException : Exception { }
 }
