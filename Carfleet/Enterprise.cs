@@ -37,7 +37,7 @@ namespace Carfleet
             throw new NotImplementedException();
         }
 
-        public void GetDriverByEmailaddress(string driverEmailaddress)
+        public Driver GetDriverByEmailaddress(string driverEmailaddress)
         {
             throw new NotImplementedException();
         }
@@ -46,7 +46,11 @@ namespace Carfleet
         {
             throw new NotImplementedException();
         }
-
+        
+        public Vehicle GetVehicleByChassisNumber(string chassiNumber)
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion public methods
     }
