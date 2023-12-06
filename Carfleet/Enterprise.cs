@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace Carfleet
 {
@@ -10,6 +13,8 @@ namespace Carfleet
         private string city;
         private string phonenumber;
         private string emailaddress;
+        private List<Vehicle> vehicles = new List<Vehicle>();
+        private List<Driver> drivers = new List<Driver>();
         #endregion private attributes
 
         #region public methods
@@ -24,22 +29,31 @@ namespace Carfleet
 
         public void Add(Vehicle vehicle)
         {
-            throw new NotImplementedException();
+            vehicles.Add(vehicle);
         }
 
         public void Add(Driver driver)
         {
-            throw new NotImplementedException();
+            drivers.Add(driver);
         }
 
         public void AssignVehicleToDriver(string chassiNumber, string driverEmailaddress)
         {
-            throw new NotImplementedException();
+            Driver driver = GetDriverByEmailaddress(driverEmailaddress);
+            Vehicle vehicle = GetVehicleByChassisNumber(chassiNumber);
+            driver.TakeAVehicule(vehicle);
         }
 
         public Driver GetDriverByEmailaddress(string driverEmailaddress)
         {
-            throw new NotImplementedException();
+            foreach (Driver driver in drivers)
+            {
+                if (driver.Emailaddress == driverEmailaddress)
+                {
+                    return driver;
+                }
+            }
+            return null;
         }
 
         public void UnassignVehicleFromDriver(string chassiNumber)
@@ -49,7 +63,14 @@ namespace Carfleet
         
         public Vehicle GetVehicleByChassisNumber(string chassiNumber)
         {
-            throw new NotImplementedException();
+            foreach (Vehicle vehicle in vehicles)
+            {
+             if(vehicle.ChassisNumber == chassiNumber)
+                {
+                    return vehicle;
+                }
+            }
+            return null;
         }
 
         #endregion public methods

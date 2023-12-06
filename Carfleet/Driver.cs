@@ -47,7 +47,7 @@ namespace Carfleet
 
         public void ReleaseAVehicle()
         {
-            if (_vehicle != null)
+            if (_vehicle == null)
             {
                 throw new NoVehicleAssignedException();
             }
